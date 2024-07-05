@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Shiniese&#39;s Blog</title>
+        <link>https://shiniese.github.io/</link>
+        <description>Recent content on Shiniese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 05 Jul 2024 18:43:48 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://shiniese.github.io/page/about/</link>
+        <pubDate>Fri, 05 Jul 2024 18:43:48 +0800</pubDate>
+        
+        <guid>https://shiniese.github.io/page/about/</guid>
+        <description>&lt;p&gt;This person lazy lazy, nothing left&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>My First Post</title>
+        <link>https://shiniese.github.io/post/my-first-post/</link>
+        <pubDate>Fri, 05 Jul 2024 18:31:39 +0800</pubDate>
+        
+        <guid>https://shiniese.github.io/post/my-first-post/</guid>
+        <description>&lt;h2 id=&#34;写什么&#34;&gt;写什么？
+&lt;/h2&gt;&lt;p&gt;主要写一些日常和一些技术文章，用来记录或存档。&lt;/p&gt;
+&lt;h2 id=&#34;为什么&#34;&gt;为什么？
+&lt;/h2&gt;&lt;p&gt;其实我蛮懒的，很早就弄过博客，只是没过多久就没动力更新了，所以最后都废了。要么没时间要么就是想干些别的。&lt;/p&gt;
+&lt;p&gt;那为啥又突然心血来潮了？&lt;/p&gt;
+&lt;p&gt;主要是前些天看到说 AI 时代，网上很多信息都将被污染，我希望&lt;strong&gt;个人博客是优质信息的最后一片净⼟&lt;/strong&gt;，所以重新操办起来了。&lt;/p&gt;
+&lt;h2 id=&#34;能否坚持&#34;&gt;能否坚持？
+&lt;/h2&gt;&lt;p&gt;再说吧&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://shiniese.github.io/page/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shiniese.github.io/page/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://shiniese.github.io/page/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shiniese.github.io/page/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://shiniese.github.io/page/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shiniese.github.io/page/links/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

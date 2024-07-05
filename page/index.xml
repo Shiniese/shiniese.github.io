@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Shiniese&#39;s Blog</title>
+        <link>https://shiniese.github.io/page/</link>
+        <description>Recent content in Pages on Shiniese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 05 Jul 2024 18:43:48 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://shiniese.github.io/page/about/</link>
+        <pubDate>Fri, 05 Jul 2024 18:43:48 +0800</pubDate>
+        
+        <guid>https://shiniese.github.io/page/about/</guid>
+        <description>&lt;p&gt;This person lazy lazy, nothing left&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://shiniese.github.io/page/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shiniese.github.io/page/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://shiniese.github.io/page/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shiniese.github.io/page/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://shiniese.github.io/page/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shiniese.github.io/page/links/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
