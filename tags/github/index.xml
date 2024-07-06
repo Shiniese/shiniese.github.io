@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Shiniese&#39;s Blog</title>
-        <link>https://shiniese.github.io/post/</link>
-        <description>Recent content in Posts on Shiniese&#39;s Blog</description>
+        <title>Github on Shiniese&#39;s Blog</title>
+        <link>https://shiniese.github.io/tags/github/</link>
+        <description>Recent content in Github on Shiniese&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 06 Jul 2024 10:57:13 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 06 Jul 2024 10:57:13 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>学习 Github 工作流</title>
         <link>https://shiniese.github.io/post/study-github-workflow/</link>
         <pubDate>Sat, 06 Jul 2024 10:57:13 +0800</pubDate>
@@ -80,22 +80,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git pull origin main
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -d my_feature
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>My First Post</title>
-        <link>https://shiniese.github.io/post/my-first-post/</link>
-        <pubDate>Fri, 05 Jul 2024 18:31:39 +0800</pubDate>
-        
-        <guid>https://shiniese.github.io/post/my-first-post/</guid>
-        <description>&lt;h2 id=&#34;写什么&#34;&gt;写什么？
-&lt;/h2&gt;&lt;p&gt;主要写一些日常和一些技术文章，用来记录或存档。&lt;/p&gt;
-&lt;h2 id=&#34;为什么&#34;&gt;为什么？
-&lt;/h2&gt;&lt;p&gt;其实我蛮懒的，很早就弄过博客，只是没过多久就没动力更新了，所以最后都废了。要么没时间要么就是想干些别的。&lt;/p&gt;
-&lt;p&gt;那为啥又突然心血来潮了？&lt;/p&gt;
-&lt;p&gt;主要是前些天看到说 AI 时代，网上很多信息都将被污染，我希望&lt;strong&gt;个人博客是优质信息的最后一片净⼟&lt;/strong&gt;，所以重新操办起来了。&lt;/p&gt;
-&lt;h2 id=&#34;能否坚持&#34;&gt;能否坚持？
-&lt;/h2&gt;&lt;p&gt;再说吧&amp;hellip;&lt;/p&gt;
-</description>
         </item>
         
     </channel>

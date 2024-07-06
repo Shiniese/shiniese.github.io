@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.128.2"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="APTX4869">
-<title>Shiniese&#39;s Blog</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍了在使用 Git 时，向远程仓库推送更新的步骤和注意事项，包括从未拉取过仓库和已拉取过仓库两种情景下的操作。">
+<title>学习 Github 工作流</title>
 
-<link rel='canonical' href='https://shiniese.github.io/'>
+<link rel='canonical' href='https://shiniese.github.io/post/study-github-workflow/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Shiniese's Blog">
-<meta property='og:description' content="APTX4869">
-<meta property='og:url' content='https://shiniese.github.io/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="学习 Github 工作流">
+<meta property='og:description' content="介绍了在使用 Git 时，向远程仓库推送更新的步骤和注意事项，包括从未拉取过仓库和已拉取过仓库两种情景下的操作。">
+<meta property='og:url' content='https://shiniese.github.io/post/study-github-workflow/'>
 <meta property='og:site_name' content='Shiniese&#39;s Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-07-06T10:57:13&#43;08:00 '/>
-<meta name="twitter:title" content="Shiniese's Blog">
-<meta name="twitter:description" content="APTX4869"><link rel="alternate" type="application/rss&#43;xml" href="https://shiniese.github.io/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='github' /><meta property='article:published_time' content='2024-07-06T10:57:13&#43;08:00'/><meta property='article:modified_time' content='2024-07-06T10:57:13&#43;08:00'/><meta property='og:image' content='https://files.catbox.moe/n39b5x.png' />
+<meta name="twitter:title" content="学习 Github 工作流">
+<meta name="twitter:description" content="介绍了在使用 Git 时，向远程仓库推送更新的步骤和注意事项，包括从未拉取过仓库和已拉取过仓库两种情景下的操作。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://files.catbox.moe/n39b5x.png' />
   
 
 
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -92,7 +94,7 @@
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -220,61 +222,10 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="/page/search/" class="search-form widget" >
-        <p>
-            <label>Search</label>
-            <input name="keyword" required placeholder="Type something..." />
-        
-            <button title="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Archives</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/page/archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">2</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -284,65 +235,27 @@
 
 
 
-    </div>
-    <h2 class="widget-title section-title">Categories</h2>
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#情景-1向远程仓库-push-更新本地从未拉取过仓库">情景 1：向远程仓库 push 更新（本地从未拉取过仓库）</a></li>
+    <li><a href="#情景-2向远程仓库-push-更新已拉取过仓库但写代码时发现远端-github-上代码出现改变">情景 2：向远程仓库 push 更新（已拉取过仓库，但写代码时发现远端 GitHub 上代码出现改变）</a></li>
+    <li><a href="#情景-3远程仓库完成更新后">情景 3：远程仓库完成更新后</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
 
-    <div class="tagCloud-tags">
-        
-            <a href="/categories/%E5%90%B9%E6%B0%B4/" class="font_size_1">
-                吹水
-            </a>
-        
-            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="font_size_1">
-                学习
-            </a>
-        
-    </div>
-</section>
-
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
-  <circle cx="9" cy="9" r="2" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title">Tags</h2>
-
-    <div class="tagCloud-tags">
-        
-            <a href="/tags/github/" class="font_size_1">
-                Github
-            </a>
-        
-            <a href="/tags/%E7%94%BB%E9%A5%BC/" class="font_size_1">
-                画饼
-            </a>
-        
-    </div>
-</section>
             
         
     </aside>
 
 
             <main class="main full-width">
-    
-    
-    
-    
-
-    <section class="article-list">
-        
-            
-<article class="has-image">
+    <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
             <a href="/post/study-github-workflow/">
@@ -418,81 +331,106 @@
 </div>
 
 </header>
-</article>
-        
-            
-<article class="">
-    <header class="article-header">
 
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E5%90%B9%E6%B0%B4/" >
-                吹水
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/post/my-first-post/">My First Post</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            万事开关难呀...
-        </h3>
-        
-    </div>
-
+    <section class="article-content">
     
     
     
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jul 05, 2024</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
 
 
 
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
+
 
     
+
+
+<div class="video-wrapper">
+    <iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;high_quality=1&amp;page=1&bvid=BV19e4y1q7JJ"
+            scrolling="no"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+    >
+    </iframe>
 </div>
 
-</header>
-</article>
+<h1 id="笔记">笔记
+</h1><h2 id="情景-1向远程仓库-push-更新本地从未拉取过仓库">情景 1：向远程仓库 push 更新（本地从未拉取过仓库）
+</h2><ol>
+<li>克隆远程仓库到本地:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone &lt;repository_url&gt;
+</span></span></code></pre></div><ol start="2">
+<li>创建并切换到新的功能分支:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b my_feature
+</span></span></code></pre></div><ol start="3">
+<li>修改代码后,查看更改:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git diff
+</span></span></code></pre></div><ol start="4">
+<li>添加修改的文件到暂存区:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add &lt;file_name&gt;
+</span></span></code></pre></div><ol start="5">
+<li>提交更改:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;注释&#34;</span>
+</span></span></code></pre></div><ol start="6">
+<li>将功能分支推送到远程仓库:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin my_feature
+</span></span></code></pre></div><h2 id="情景-2向远程仓库-push-更新已拉取过仓库但写代码时发现远端-github-上代码出现改变">情景 2：向远程仓库 push 更新（已拉取过仓库，但写代码时发现远端 GitHub 上代码出现改变）
+</h2><ol>
+<li>当主分支(main)有更新时,同步这些更新到功能分支:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+</span></span><span style="display:flex;"><span>git pull origin main
+</span></span><span style="display:flex;"><span>git checkout my_feature
+</span></span><span style="display:flex;"><span>git rebase main
+</span></span></code></pre></div><p><code>git rebase main</code> 意思是先把 main 移过来，然后根据我的 commit 来修改成新的内容。中途可能会出现 <code>rebase conflict</code>，这时需要手动选择保留哪段代码。</p>
+<ol start="2">
+<li>强制推送更新后的功能分支到远程仓库:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push -f origin my_feature
+</span></span></code></pre></div><p>需要注意的是,在使用 <code>git push -f</code> (强制推送)时要格外小心,因为它会覆盖远程分支的历史。只有在确定没有其他人在同一分支上工作或者大家都是用这样同一套工作流时才应使用此命令。</p>
+<ol start="3">
+<li>在GitHub上创建Pull Request</li>
+</ol>
+<h2 id="情景-3远程仓库完成更新后">情景 3：远程仓库完成更新后
+</h2><p>合并 Pull Request 后，清理分支:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+</span></span><span style="display:flex;"><span>git pull origin main
+</span></span><span style="display:flex;"><span>git branch -d my_feature
+</span></span></code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/github/">Github</a>
         
     </section>
-<footer class="site-footer">
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -503,6 +441,85 @@
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>
