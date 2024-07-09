@@ -6,7 +6,23 @@
         <description>Recent content in Tags on Shiniese&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 06 Jul 2024 10:57:13 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 09 Jul 2024 09:40:09 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Golang</title>
+        <link>https://shiniese.github.io/tags/golang/</link>
+        <pubDate>Tue, 09 Jul 2024 09:40:09 +0800</pubDate>
+        
+        <guid>https://shiniese.github.io/tags/golang/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vs Code</title>
+        <link>https://shiniese.github.io/tags/vs-code/</link>
+        <pubDate>Tue, 09 Jul 2024 09:40:09 +0800</pubDate>
+        
+        <guid>https://shiniese.github.io/tags/vs-code/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Github</title>
         <link>https://shiniese.github.io/tags/github/</link>
         <pubDate>Sat, 06 Jul 2024 10:57:13 +0800</pubDate>

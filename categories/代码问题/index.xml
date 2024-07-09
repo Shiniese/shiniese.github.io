@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>代码问题 on Shiniese&#39;s Blog</title>
+        <link>https://shiniese.github.io/categories/%E4%BB%A3%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+        <description>Recent content in 代码问题 on Shiniese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 09 Jul 2024 09:40:09 +0800</lastBuildDate><atom:link href="https://shiniese.github.io/categories/%E4%BB%A3%E7%A0%81%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VS Code 中  gopls 的安装问题及解决方案 - Ubuntu</title>
+        <link>https://shiniese.github.io/post/how-to-solve-vs-code-gopls-command-is-not-available/</link>
+        <pubDate>Tue, 09 Jul 2024 09:40:09 +0800</pubDate>
+        
+        <guid>https://shiniese.github.io/post/how-to-solve-vs-code-gopls-command-is-not-available/</guid>
+        <description>&lt;img src="https://files.catbox.moe/v0qv5j.png" alt="Featured image of post VS Code 中  gopls 的安装问题及解决方案 - Ubuntu" /&gt;&lt;h2 id=&#34;问题重现&#34;&gt;问题重现
+&lt;/h2&gt;&lt;p&gt;最近在 vs code 中使用 go 语言写代码时右下角总是出现下面的弹窗，每次无论点击 &lt;code&gt;install&lt;/code&gt; 还是 &lt;code&gt;install all&lt;/code&gt; 都是安装失败。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://files.catbox.moe/v0qv5j.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;how-to-solve-vs-code-gopls-command-is-not-available-1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;安装报错：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 安装指令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go install -v golang.org/x/tools/gopls@latest 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 报错&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;../../../go/pkg/mod/golang.org/x/tools/gopls@v0.16.1/internal/golang/comment.go:12:2: package go/doc/comment is not in GOROOT &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;/usr/lib/go-1.18/src/go/doc/comment&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;报错后其实没有影响我的正常使用，因此没管它。直到有一次在我的另一台电脑上问题重现，并且一点击 &lt;code&gt;install&lt;/code&gt; 就成功安装后才发现这是个好东西。它能够&lt;strong&gt;实现诸如自动完成, 代码提示等功能&lt;/strong&gt;。因此今日决定 &lt;code&gt;fix&lt;/code&gt; 这个遗留问题。&lt;/p&gt;
+&lt;h2 id=&#34;尝试过的方法&#34;&gt;尝试过的方法
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;根据报错 &lt;code&gt;package go/doc/comment is not in GOROOT&lt;/code&gt;，怀疑是 GOROOT 没有正确配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export GOROOT&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/usr/lib/go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;清理模块缓存并重新下载：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go clean -modcache
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go install -v golang.org/x/tools/gopls@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;仍然无法解决问题。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;手动安装 &lt;code&gt;go/doc/comment&lt;/code&gt; 包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go get -u golang.org/x/tools/godoc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go install -v golang.org/x/tools/gopls@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;仍然无法解决。&lt;/p&gt;
+&lt;p&gt;查询网上资料，可能是网络问题，但本地早已正确配置相关代理，排除。&lt;/p&gt;
+&lt;h2 id=&#34;最终解决方案&#34;&gt;最终解决方案
+&lt;/h2&gt;&lt;p&gt;在 stackoverflow&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 上看到有人用 &lt;code&gt;brew install gopls&lt;/code&gt; 解决了。我用的是 Ubuntu，尝试搜索该包并安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 还真有 gopls 包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt search gopls 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install gopls
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;搞定！比网上改配置、改环境、手动下载的方法简单多了，一行代码搞定。能用系统自带包解决还要啥自行车？&lt;/p&gt;
+&lt;h2 id=&#34;课外知识语言服务器协议---language-server-protocol&#34;&gt;课外知识&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; - Language Server Protocol
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Go 扩展默认是使用大量的 Go 工具来提供各种功能的, 每个工具提供某个方面的能力, 比如代码提示是依靠 gocode 的.&lt;/p&gt;
+&lt;p&gt;不过微软在开发 VS Code 过程中, 定义一种协议, 语言服务器协议, Language Server Protocol.&lt;/p&gt;
+&lt;p&gt;这可是个好东西, 如果你需要开发编辑器或 IDE, 就不需要再为每种语言实现诸如自动完成, 代码提示等功能了,
+直接利用 语言服务器协议 就行了.&lt;/p&gt;
+&lt;p&gt;而 gopls 就是官方的语言服务器.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/66668506/how-to-solve-vs-code-gopls-command-is-not-available&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How to solve vs code - gopls command is not available&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000020276833?u_atoken=f76fa9ca662a7c6bd0ea6eded5bccb2c&amp;amp;u_asig=2760774117204873388185535e622a&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在 VS Code 中使用 gopls&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
