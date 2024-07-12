@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍了酷热指数（Heat Index）的概念，还讨论了如何使用空调的除湿模式和制冷模式来达到节能和舒适的效果，并分享了个人实验和思考。">
+<title>酷热指数（Heat Index）以及我的一些思考</title>
+
+<link rel='canonical' href='https://shiniese.github.io/post/heat-index-and-some-of-my-thoughts/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="酷热指数（Heat Index）以及我的一些思考">
+<meta property='og:description' content="介绍了酷热指数（Heat Index）的概念，还讨论了如何使用空调的除湿模式和制冷模式来达到节能和舒适的效果，并分享了个人实验和思考。">
+<meta property='og:url' content='https://shiniese.github.io/post/heat-index-and-some-of-my-thoughts/'>
+<meta property='og:site_name' content='Shiniese&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='实验' /><meta property='article:tag' content='发现' /><meta property='article:published_time' content='2024-07-12T16:08:05&#43;08:00'/><meta property='article:modified_time' content='2024-07-12T16:08:05&#43;08:00'/><meta property='og:image' content='https://files.catbox.moe/9infqu.jpg' />
+<meta name="twitter:title" content="酷热指数（Heat Index）以及我的一些思考">
+<meta name="twitter:description" content="介绍了酷热指数（Heat Index）的概念，还讨论了如何使用空调的除湿模式和制冷模式来达到节能和舒适的效果，并分享了个人实验和思考。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://files.catbox.moe/9infqu.jpg' />
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://files.catbox.moe/ctpqq3.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Shiniese&#39;s Blog</a></h1>
+            <h2 class="site-description">APTX4869</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Shiniese'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#偶然发现">偶然发现</a></li>
+    <li><a href="#酷热指数heat-index">酷热指数（Heat Index）</a></li>
+    <li><a href="#我的思考">我的思考</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/heat-index-and-some-of-my-thoughts/">
+                
+                    <img src="https://files.catbox.moe/9infqu.jpg" loading="lazy" alt="Featured image of post 酷热指数（Heat Index）以及我的一些思考" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%94%9F%E6%B4%BB/" >
+                生活
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/heat-index-and-some-of-my-thoughts/">酷热指数（Heat Index）以及我的一些思考</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            介绍了酷热指数（Heat Index）的概念，还讨论了如何使用空调的除湿模式和制冷模式来达到节能和舒适的效果，并分享了个人实验和思考。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 12, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="偶然发现">偶然发现
+</h2><p><img src="https://files.catbox.moe/9infqu.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="heat-index-and-some-of-my-thoughts-1"
+	
+	
+></p>
+<p>昨天把刚到的 <strong>DHT11 温湿度传感器</strong> 在  <strong>esp8266</strong> 上试了一下，发现在库函数除了计算温度和温度外还有一个叫 <strong>Heat Index</strong> 的东西，看见它和温度单位一样但数值不一样，那么它和温度肯定是有一些差别的，于是查资料学习。</p>
+<h2 id="酷热指数heat-index">酷热指数（Heat Index）
+</h2><blockquote>
+<p><strong>酷热指数（英语：Heat Index）</strong> 是一种综合空气温度和相对湿度的热指标。人体通过排出汗液来达到降温的目的，在这个过程里汗液中的水分得以蒸发并且从人体带走热量。但是当相对湿度较高时，水分的蒸发率就会降低。这意味着从身体中带走热量的过程变得缓慢，相对处于干燥空气中的情况，人体内会自动排汗并带走身上的热量。基于在已知温度和湿度时的主观描述定义的计量方法，得出的指数可以将一组温度和湿度的组合换算成干燥空气中的一个相对更高的温度值。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>简单来说，酷热指数是一个指数，它结合了空气温度和相对湿度，在阴凉的地方，以人类感知的等效温度来表示热度。酷热指数是描述在阴凉处体验的温度，但它<strong>不考虑来自直射阳光、体力活动或风的加热和冷却</strong>。相对湿度高会减少蒸发和冷却，增加不适感和潜在的热应激。酷热指数的计算公式基于温度和湿度，并不考虑其他因素，如风和阳光。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><em>因此这也是它的一个局限性，毕竟一个人受到太阳暴晒和在阴凉处乘凉的体感温度还是不一样的。</em></p>
+<p>下表来自<a class="link" href="https://en.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration"  target="_blank" rel="noopener"
+    >美国国家海洋和大气管理局</a>。色谱柱的起始温度为 80 °F (27 °C)，但在 79 °F (26 °C) 以及高湿度时的类似温度下也存在热指数效应。</p>
+<p><img src="https://files.catbox.moe/p51io9.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="heat-index-and-some-of-my-thoughts-2"
+	
+	
+></p>
+<p>温度热指数（°C），带阴影的警告/危险范围：</p>
+<p><img src="https://files.catbox.moe/67af07.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="heat-index-and-some-of-my-thoughts-3"
+	
+	
+></p>
+<h2 id="我的思考">我的思考
+</h2><p>那既然湿度低会更凉快些，那夏天开除湿模式会不会比正常制冷模式会更好些？</p>
+<p>经过一番查找资料，总结了一下大概有以下几点：</p>
+<ul>
+<li>当室外温度在20℃到30℃之间时，使用除湿模式通常比制冷模式更省电。</li>
+<li>如果室外温度超过30℃，尤其是达到35℃以上，除湿模式的降温效果会明显变差，耗电量也会增加。</li>
+<li>在梅雨季节或空气湿度较高的南方地区，由于空气中的水汽较多，使用除湿模式可以有效降低室内湿度，从而带来更好的舒适感。</li>
+</ul>
+<p>我就处在南方地区，确实湿度对于我们来说是一很大的问题。特别是被子如果不隔一段时间去晒一下就会摸起来感觉黏黏的，睡起来很不舒服。</p>
+<p>那么有没有在夏季实现最高效的空调使用方法？我想到了一个组合方法：</p>
+<ol>
+<li>因为房间一开始很热，所以想先使用制冷模式快速降低温度。</li>
+<li>一旦温度舒适，再切换到除湿模式来降低房间温度，一个是保持舒适度二个是不会特别冷。</li>
+</ol>
+<p>经过实验，这个方法确实十分有效，在我的体感方面测试成功。我试了一直开除湿、一直开制冷和上面的组合方法。第一种温度降不下去，第二种温度降得快但是很费电（感觉上，毕竟身边没有设备测试），而最后的组合方法确实达到了我想要的效果，温度下降快，并且开启除湿后身体舒适度会好很多。另外其实我还漏说了一个，其实第一步可以搭配风扇实现快速降温，我之前也一直是这样做的。具体原理好像是因为空气的流通速度增加会增强导热性？（之前上《流体力学》好像有讲，没认真听课。这里的“热”指的是热度，我们所说的“冷”也是有热度的！）</p>
+<hr>
+<p>实验完毕，又水了一篇小文章，为自己鼓掌，再接再厉。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a class="link" href="https://zh.wikipedia.org/wiki/%E9%85%B7%E7%83%AD%E6%8C%87%E6%95%B0"  target="_blank" rel="noopener"
+    >酷热指数 - 维基百科，自由的百科全书</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a class="link" href="https://en.wikipedia.org/wiki/Heat_index"  target="_blank" rel="noopener"
+    >Heat index - Wikipedia</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%AE%9E%E9%AA%8C/">实验</a>
+        
+            <a href="/tags/%E5%8F%91%E7%8E%B0/">发现</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Shiniese&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
